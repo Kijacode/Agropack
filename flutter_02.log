@@ -1,0 +1,107 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+String: Exit code 1 from: E:\agropack-master\android\gradlew.bat -v:
+
+ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+
+Please set the JAVA_HOME variable in your environment to match the
+location of your Java installation.
+
+```
+#0      runCheckedAsync (package:flutter_tools/src/base/process.dart:251:5)
+<asynchronous suspension>
+#1      _initializeGradle (package:flutter_tools/src/android/gradle.dart:181:9)
+<asynchronous suspension>
+#2      _ensureGradle (package:flutter_tools/src/android/gradle.dart:162:37)
+<asynchronous suspension>
+#3      _readGradleProject (package:flutter_tools/src/android/gradle.dart:95:31)
+<asynchronous suspension>
+#4      _gradleProject (package:flutter_tools/src/android/gradle.dart:87:34)
+<asynchronous suspension>
+#5      getGradleAppOut (package:flutter_tools/src/android/gradle.dart:81:29)
+<asynchronous suspension>
+#6      AndroidApk.fromAndroidProject (package:flutter_tools/src/application_package.dart:96:23)
+<asynchronous suspension>
+#7      getApplicationPackageForPlatform (package:flutter_tools/src/application_package.dart:283:30)
+<asynchronous suspension>
+#8      FlutterDevice.runHot (package:flutter_tools/src/resident_runner.dart:270:21)
+<asynchronous suspension>
+#9      HotRunner.run (package:flutter_tools/src/run_hot.dart:261:39)
+<asynchronous suspension>
+#10     RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:391:37)
+<asynchronous suspension>
+#11     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:372:18)
+#12     _asyncThenWrapperHelper.<anonymous closure> (dart:async/runtime/libasync_patch.dart:77:64)
+#13     _rootRunUnary (dart:async/zone.dart:1132:38)
+#14     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#15     _FutureListener.handleValue (dart:async/future_impl.dart:129:18)
+#16     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:642:45)
+#17     Future._propagateToListeners (dart:async/future_impl.dart:671:32)
+#18     Future._complete (dart:async/future_impl.dart:476:7)
+#19     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#20     _AsyncAwaitCompleter.complete (dart:async/runtime/libasync_patch.dart:28:18)
+#21     _completeOnAsyncReturn (dart:async/runtime/libasync_patch.dart:295:13)
+#22     RunCommand.usageValues (package:flutter_tools/src/commands/run.dart)
+#23     _asyncThenWrapperHelper.<anonymous closure> (dart:async/runtime/libasync_patch.dart:77:64)
+#24     _rootRunUnary (dart:async/zone.dart:1132:38)
+#25     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#26     _FutureListener.handleValue (dart:async/future_impl.dart:129:18)
+#27     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:642:45)
+#28     Future._propagateToListeners (dart:async/future_impl.dart:671:32)
+#29     Future._complete (dart:async/future_impl.dart:476:7)
+#30     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#31     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async/runtime/libasync_patch.dart:33:20)
+#32     _rootRun (dart:async/zone.dart:1124:13)
+#33     _CustomZone.run (dart:async/zone.dart:1021:19)
+#34     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#35     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#36     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#37     _runPendingImmediateCallback (dart:isolate/runtime/libisolate_patch.dart:115:13)
+#38     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, v0.8.2, on Microsoft Windows [Version 10.0.10240], locale en-US)
+    • Flutter version 0.8.2 at E:\fllutter\flutter
+    • Framework revision 5ab9e70727 (4 weeks ago), 2018-09-07 12:33:05 -0700
+    • Engine revision 58a1894a1c
+    • Dart version 2.1.0-dev.3.1.flutter-760a9690c2
+
+[!] Android toolchain - develop for Android devices (Android SDK 28.0.2)
+    • Android SDK at C:\Users\Hija\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-28, build-tools 28.0.2
+    • Java binary at: C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+    ✗ Could not determine java version
+
+[!] Android Studio (version 3.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin version 27.1.1
+    • Dart plugin version 173.4700
+    ✗ Unable to determine bundled Java version.
+    • Try updating or re-installing Android Studio.
+
+[!] IntelliJ IDEA Community Edition (version 2018.2)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.1
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    • Dart plugin version 182.3911.37
+    • For information about installing plugins, see
+      https://flutter.io/intellij-setup/#installing-the-plugins
+
+[✓] VS Code (version 1.27.2)
+    • VS Code at C:\Users\Hija\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 2.19.0
+
+[✓] Connected devices (1 available)
+    • TECNO L8 Lite • 0193810720811058 • android-arm • Android 6.0 (API 23)
+
+! Doctor found issues in 3 categories.
+```
